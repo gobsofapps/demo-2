@@ -9,7 +9,7 @@ module.exports = {
     },
     redirect_uri: process.env.NODE_ENV === 'development'
       ? 'https://eugenedev.ngrok.io/oidc-response'
-      : 'https://citibankverified.herokuapp.com/oidc-response',
+      : 'https://wellsfargoverified.herokuapp.com/oidc-response',
     authCredentials: {
       client_id: 'demo_rp',
       client_secret: 'IB36b2fOCu3Et8gJriTGtP68NRQc0Y5d',
