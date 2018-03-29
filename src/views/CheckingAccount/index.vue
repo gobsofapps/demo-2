@@ -6,8 +6,8 @@
     <div class="sub-header">Banking made easy. Open with $25.</div>
     <div class="text-link">How to avoid the $10 monthly service fee</div>
     <div class="text-link">Common fees for this account (PDF)</div>
-    <a :href="QR.signInQRCode" class="open-checking-account verified w-button">Open with Verified.Me</a>
-    <a href="#" class="open-checking-account w-button">Go to Form</a>
+    <a :href="QR.signInQRCode" class="open-checking-account verified w-button">Open with bankID</a>
+    <div @click='authorizeUser()' class="open-checking-account w-button">Go to Form</div>
     <div class="details-text">Everyday Checking Details &gt;</div>
   </div><a class="compare-acounts-button w-button">Compare All Accounts</a>
   <h3 class="heading-2">Checking Account Benefits</h3>
@@ -32,6 +32,9 @@
       ...mapActions([
         'getSignInQRCode',
       ]),
+      authorizeUser() {
+        this.$store.dispatch('authorizeUser');
+      },
     },
     mounted() {
       this.getSignInQRCode();

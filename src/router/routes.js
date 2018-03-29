@@ -5,6 +5,7 @@ import UserVerified from '@/views/Profile/user-verified';
 import RedirectPage from '@/views/RedirectPage';
 import Account from '@/views/Profile/account';
 import CheckingAccount from '@/views/CheckingAccount';
+import OIDCAuthRedirect from '@/views/Profile/oidc-auth-redirect';
 
 export default [
   {
@@ -41,6 +42,12 @@ export default [
     path: '/redirect',
     components: {
       default: RedirectPage,
+    },
+  },
+  {
+    path: '/oidc-response',
+    components: {
+      default: OIDCAuthRedirect,
     },
   },
   {
